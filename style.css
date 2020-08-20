@@ -89,7 +89,7 @@ button {
 #formNewLesson button {
     margin-top: 2rem;
     color: var(--purple);
-    background-color: rgb(231, 149, 149);
+    background-color: #B7E3CC;
 }   
 #formNewLesson button:hover {
      background-color: var(--white);
@@ -119,12 +119,12 @@ button {
 
 #formFilter button {
     margin-top: 2rem;
-    color: rgb(231, 149, 149);
-    background-color: var(--purple);
+    color: var(--purple);
+    background-color:  rgb(183, 227, 204);
 }
 #formFilter button:hover {
-    color: var(--purple);
-    background-color: rgb(231, 149, 149);
+    color: var(--white);
+    background-color: var(--purple);
 }
 
 /* list */
