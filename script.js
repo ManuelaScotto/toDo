@@ -7,7 +7,7 @@ const ulList = document.getElementById('list');
 newLesson.addEventListener('submit', addLesson);
 ulList.addEventListener('click', removeLesson);
 filter.addEventListener('keyup', addFilter);
-// btnDelete.addEventListener('submit', deleteAll);
+btnDelete.addEventListener('click', deleteAll);
 
 function addLesson(e) {
     if (inputNew.value == '') {
@@ -33,13 +33,20 @@ function removeLesson(e) {
     }
 }
 
+let li = ulList.getElementsByTagName('li');
 function addFilter(e) {
-    let f = e.target.value;
-    let list = document.getElementById('list');
+    let f = e.target.value.toLowerCase();
     console.log(f);
-    console.log(list.firstChild.textContent)
-    // if (!input.value.includes(f)) {
-    //     console.log('not');
-    // }
+    console.log(li);
+    Array.from(li).forEach(e => {
+        let liValue = (e.firstChild.textContent);
+        console.log(liValue);
+        liValue.includes(f) ? e.style.display = 'block' : e.style.display = 'none';
+    })
+}
 
+function deleteAll() {
+    Array.from(li).forEach(e => {
+        e.remove();
+    })
 }
