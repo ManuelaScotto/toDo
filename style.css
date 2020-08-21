@@ -57,6 +57,7 @@ button, input {
 
 button {
     padding: 8px 20px;
+    cursor: pointer;
 }
 
 /* wrapper */
@@ -117,12 +118,12 @@ button {
     background-color: rgba(74, 0, 128, 0.1);
 }
 
-#formFilter button {
+.container-right button {
     margin-top: 2rem;
     color: var(--purple);
     background-color:  rgb(183, 227, 204);
 }
-#formFilter button:hover {
+.container-right button:hover {
     color: var(--white);
     background-color: var(--purple);
 }
